@@ -1,5 +1,5 @@
 {% set name = "django-queryhunter" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django_queryhunter-{{ version }}.tar.gz
-  sha256: 3b3da20a3f08b57a8493a8f49ba9f96ac33bb602f5ddf2666a2d9d49a32550fe
+  sha256: a2b9066afc4134a316d15fb286f4fcc86b7dcd89f9b4b0333c2aedc0d9f2e6ee
 
 build:
   noarch: python
