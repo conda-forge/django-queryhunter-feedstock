@@ -1,13 +1,13 @@
 {% set name = "django-queryhunter" %}
-{% set version = "0.1.6" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django_queryhunter-{{ version }}.tar.gz
-  sha256: a2b9066afc4134a316d15fb286f4fcc86b7dcd89f9b4b0333c2aedc0d9f2e6ee
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_queryhunter-{{ version }}.tar.gz
+  sha256: 2adf458e4bafbf8bb45c2f19622e9bacd5df343154d12540ac49c9de40ad1623
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry >=1.1.13
     - pip
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }}
     - django >=3.2
 
 test:
@@ -30,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/PaulGilmartin/django-queryhunter
